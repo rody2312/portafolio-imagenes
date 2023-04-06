@@ -3,6 +3,11 @@ import React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Portfolio from "./components/Portfolio";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import BackToTopBtn from "./components/BackToTopBtn";
 
 const App = () => {
   return (
@@ -10,7 +15,11 @@ const App = () => {
       <Header />
       <Hero />
       <About />
-      <div style={{height: '2000px'}}></div>
+      <Portfolio />
+      <Services />
+      <Contact />
+      <Footer />
+      <BackToTopBtn />
     </div>
   );
 };
