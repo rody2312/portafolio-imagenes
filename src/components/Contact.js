@@ -35,18 +35,19 @@ const Contact = () => {
               );
             })}
           </div>
-          
-            {/* form */}
-            <form className="space-y-8 w-full max-w-[780px]">
-                <div className="flex gap-8">
-                    <input className="input" type="text" placeholder="Tu nombre" />
-                    <input className="input" type="email" placeholder="Tu correo" />
-                </div>
-                <input type="text" className="input" placeholder="Subject" />
-                <textarea className="textarea" placeholder="Tu mensaje"></textarea>
-                <button className="btn btn-lg bg-accent hover:bg-accent-hover">Enviar mensaje</button>
-            </form>
 
+          {/* form */}
+          <form id="contact-form" className="space-y-8 w-full max-w-[780px]">
+            <div className="flex gap-8">
+              <input id="name" name="name" className="input" type="text" placeholder="Tu nombre" required />
+              <input id="email" name="email" className="input" type="email" placeholder="Tu correo" required/>
+            </div>
+            <input id="subject" name="subject" type="text" className="input" placeholder="Asunto" required/>
+            <textarea id="mensaje" name="mensaje" className="textarea" placeholder="Tu mensaje" required></textarea>
+            <button type="submit" className="btn btn-lg bg-accent hover:bg-accent-hover">
+              Enviar mensaje
+            </button>
+          </form>
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@ import imgTest from "../assets/img/noimage.webp";
 
 const About = () => {
   return (
-    <section className="section bg-secondary">
+    <section id="about" className="section bg-secondary">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-24">
           <img
