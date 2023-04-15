@@ -10,6 +10,7 @@ import {
   FiTag,
   FiMail,
   FiMapPin,
+  FiPhone
 } from "react-icons/fi";
 
 // companies icons
@@ -862,6 +863,12 @@ export const contact = [
     title: "Datos de contacto",
     subtitle: "mail@mail.cl",
     description: "Enviame un email a hello@youremail.com",
+  },
+  {
+    icon: <FiPhone />,
+    title: "Número",
+    subtitle: "+569 99999999",
+    description: "+569 99999999",
   },
   {
     icon: <FiMapPin />,

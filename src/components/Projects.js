@@ -13,6 +13,8 @@ const Projects = () => {
   const [active, setActive] = useState(0);
   const [projectsToShow, setProjectsToShow] = useState(9);
 
+  const [selectedItem, setSelectedItem] = useState(0);
+
   useEffect(() => {
     if (item.name.toLowerCase() === "todos") {
       setProjects(projectsData);
@@ -37,6 +39,12 @@ const Projects = () => {
     setProjectsToShow((prevProjectsToShow) => prevProjectsToShow + 9);
   };
 
+  const handleSelectChange = (e) => {
+    const selectedIndex = e.target.value;
+    setSelectedItem(selectedIndex);
+    handleClick(projectsNav[selectedIndex].name, selectedIndex);
+  };
+
   return (
     <div>
       {/* nav */}
@@ -51,6 +59,23 @@ const Projects = () => {
               {category.name}
             </button>
           ))}
+        </div>
+        {/* Select for small screens */}
+        <div className="select-container custom-select">
+          <div className="select-wrapper">
+            <select
+              className="w-full max-w-xs mx-auto"
+              value={selectedItem}
+              onChange={handleSelectChange}
+            >
+              {projectsNav.map((category, index) => (
+                <option key={index} value={index}>
+                  {category.name}
+                </option>
+              ))}
+            </select>
+            <span className="select-arrow">▼</span>
+          </div>
         </div>
       </nav>
 
@@ -71,7 +96,10 @@ const Projects = () => {
       </TransitionGroup>
       {projects.length > projectsToShow && (
         <div className="flex justify-center my-4">
-          <button onClick={handleShowMore} className="btn btn-md border rounded-lg">
+          <button
+            onClick={handleShowMore}
+            className="btn btn-md border rounded-lg"
+          >
             Ver más
           </button>
         </div>
