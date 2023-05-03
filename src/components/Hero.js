@@ -10,41 +10,45 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="lg:h-[85vh] flex items-center bg-primary lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden"
+      className="lg:h-screen flex items-center bg-primary lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden"
+      style={{
+        backgroundImage: `url(${Project1})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        
+      }}
     >
-      <div className="container mx-auto h-full">
+      <div className="container mx-auto h-full relative">
         <div className="flex items-center h-full pt-8">
-          {/* Left Side */}
-          <div className="flex-1 flex flex-col items-start justify-center">
-            <p className="text-xl text-accent mb-6 py-4">Asesor Gráfico</p>
-            <h1 className="text-4x1 leading-[44px] md:text-5x1 md:leading-tight lg:text-7x1 lg:leading-[1.2] font-bold md:tracking-[-2px] py-4">
-              Soluciones de Diseño
+          {/* Center Text */}
+          <div className="flex-1 flex flex-col items-center justify-center z-10 relative text-center">
+            
+            {/* Contenido */}
+            <h1
+              className="text-5xl text-white font-bold mb-4 text-center"
+            >
+              Asesor grafico
             </h1>
-            <p className="py-4 w-11/12">
-              Experto en diseño gráfico con experiencia en trabajos con acrílico
-              y acero, jaulas y modulares, montajes publicitarios, productos
-              para faenas, señalética preventiva y señalética vial. Ofreciendo
-              soluciones personalizadas para satisfacer las
-              necesidades específicas de cada proyecto.
+            <p
+              className="text-white text-xl mb-8 text-center"
+              
+            >
+              Descripcion
             </p>
-            <button className="btn btn-md bg-accent hover:bg-accent-hover md:btn-lg transition-all">
-              <Link
-                to="portfolio"
-                activeClass="active"
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-70}
-                className="transition-all duration-300"
-              >
-                Ver trabajos
-              </Link>
-            </button>
+            <Link
+              to="about"
+              smooth={true}
+              offset={-80}
+              className="bg-secondary text-white py-3 px-6 rounded-full text-xl hover:bg-white hover:text-secondary"
+            >
+              Trabajos
+            </Link>
           </div>
-          {/* Right Side */}
-          <div className="hidden lg:flex flex-1 justify-center items-center">
+         {/* Background (Carrusel) */}
+          <div className="absolute top-0 left-0 w-full h-full z-0">
+
             <Carousel
-              className="w-full max-w-[600px] h-[400px]"
+              className="w-full h-full absolute top-0 left-0 hero-carousel"
               autoPlay
               infiniteLoop
               interval={5000}
