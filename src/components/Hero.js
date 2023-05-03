@@ -10,23 +10,45 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="lg:h-[85vh] flex items-center bg-primary lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden"
+      className="h-screen relative bg-primary bg-cover bg-center bg-no-repeat overflow-hidden"
     >
-      <div className="container mx-auto h-full">
-        <div className="flex items-center h-full pt-8">
-          {/* Left Side */}
-          <div className="flex-1 flex flex-col items-start justify-center">
+      <div className="container mx-auto h-full relative">
+        <div className="absolute top-0 left-0 w-full h-full z-0">
+          <Carousel
+            className="w-full h-full max-w-full"
+            autoPlay
+            infiniteLoop
+            interval={5000}
+            showStatus={false}
+            showIndicators={false}
+            showThumbs={false}
+          >
+            <div>
+              <img
+                className="object-cover object-center w-full h-full"
+                src={Project1}
+                alt="Imagen 1"
+              />
+            </div>
+            <div>
+              <img
+                className="object-cover object-center w-full h-full"
+                src={Project2}
+                alt="Imagen 2"
+              />
+            </div>
+            <div>
+              <img
+                className="object-cover object-center w-full h-full"
+                src={Project3}
+                alt="Imagen 3"
+              />
+            </div>
+          </Carousel>
+        </div>
+        <div className="flex items-center justify-center h-full z-10">
+          <div className="flex flex-col items-center justify-center">
             <p className="text-xl text-accent mb-6 py-4">Asesor Gráfico</p>
-            <h1 className="text-4x1 leading-[44px] md:text-5x1 md:leading-tight lg:text-7x1 lg:leading-[1.2] font-bold md:tracking-[-2px] py-4">
-              Soluciones de Diseño
-            </h1>
-            <p className="py-4 w-11/12">
-              Experto en diseño gráfico con experiencia en trabajos con acrílico
-              y acero, jaulas y modulares, montajes publicitarios, productos
-              para faenas, señalética preventiva y señalética vial. Ofreciendo
-              soluciones personalizadas para satisfacer las
-              necesidades específicas de cada proyecto.
-            </p>
             <button className="btn btn-md bg-accent hover:bg-accent-hover md:btn-lg transition-all">
               <Link
                 to="portfolio"
@@ -40,40 +62,6 @@ const Hero = () => {
                 Ver trabajos
               </Link>
             </button>
-          </div>
-          {/* Right Side */}
-          <div className="hidden lg:flex flex-1 justify-center items-center">
-            <Carousel
-              className="w-full max-w-[600px] h-[400px]"
-              autoPlay
-              infiniteLoop
-              interval={5000}
-              showStatus={false}
-              showIndicators={false}
-              showThumbs={false}
-            >
-              <div>
-                <img
-                  className="object-cover object-center w-full h-full"
-                  src={Project1}
-                  alt="Imagen 1"
-                />
-              </div>
-              <div>
-                <img
-                  className="object-cover object-center w-full h-full"
-                  src={Project2}
-                  alt="Imagen 2"
-                />
-              </div>
-              <div>
-                <img
-                  className="object-cover object-center w-full h-full"
-                  src={Project3}
-                  alt="Imagen 3"
-                />
-              </div>
-            </Carousel>
           </div>
         </div>
       </div>
