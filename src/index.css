@@ -198,6 +198,7 @@ nav ul {
   }
 }
 
+/* CBA */
 
 /*##### HERO SECTION #####*/
 
@@ -229,4 +230,12 @@ nav ul {
       }
     }
   }
+}
+
+.hero-carousel .carousel-slider .slide img {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  filter: blur(5px);
+  
 }
