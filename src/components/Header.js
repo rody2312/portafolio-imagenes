@@ -15,7 +15,7 @@ const Header = () => {
   });
 
   return (
-    <header className={`bg-tertiary h-24 flex items-center fixed top-0 w-full text-white z-10 transition-all duration-300`}>
+    <header className={`bg-tertiary h-24 flex items-center fixed top-0 w-full text-white z-20`}>
       <div className="container mx-auto h-full flex items-center justify-between">
         {/* logo */}
         <a href="#">

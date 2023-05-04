@@ -1,9 +1,6 @@
 //  icons
 import {
-  FiYoutube,
   FiInstagram,
-  FiGithub,
-  FiDribbble,
   FiLayout,
   FiSettings,
   FiPenTool,
@@ -873,7 +870,7 @@ export const contact = [
   {
     icon: <FiMapPin />,
     title: "Ubicación",
-    subtitle: "Antofagasta",
+    subtitle: "Antofagasta, Antofagasta",
     description: "Antofagasta",
   },
 ];

@@ -55,11 +55,28 @@ const Projects = () => {
               key={index}
               className={`category-button ${active === index ? "active" : ""}`}
               onClick={() => handleClick(category.name, index)}
+              style={{
+                backgroundColor: active === index ? "#186EC2" : "#34495E",
+                color: "white",
+                borderRadius: "5px",
+                padding: "10px 20px",
+                margin: "5px",
+                fontSize: "16px",
+                border: "none",
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => (e.target.style.backgroundColor = "#186EC2")}
+              onMouseLeave={(e) =>
+                (e.target.style.backgroundColor =
+                  active === index ? "#186EC2" : "#34495E")
+              }
             >
               {category.name}
             </button>
           ))}
         </div>
+
         {/* Select for small screens */}
         <div className="select-container custom-select">
           <div className="select-wrapper">

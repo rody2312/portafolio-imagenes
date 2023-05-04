@@ -23,7 +23,7 @@ const Footer = () => {
             <img src={Logo} alt="" />
           </div>
 
-          <p>&copy; 2023 Rody Chuquimia. Todos los derechos reservados</p>
+          <p>&copy; 2023 Rody Chuquimia.</p>
         </div>
       </div>
     </footer>
